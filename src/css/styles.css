@@ -1,0 +1,207 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+
+
+/* Common styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/*====================local changes====================*/
+
+.body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.container {
+  width: 1128px;
+  margin: 0 auto;
+
+  padding-top: 36px;
+}
+
+.form {
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  border-radius: 8px;
+  padding: 24px;
+  background: #fff;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.search-text {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.search-text:hover {
+  border-color: #000;
+  outline: none;
+}
+
+.search-text:focus {
+  border-color: #4e75ff;
+}
+
+
+.search-btn {
+
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  border: none;
+  background-color: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.search-btn:hover {
+  background: #6c8cff;
+}
+
+.search-btn:active {
+  transform: scale(0.98);
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.ul-container {
+  width: 1128px;
+  margin: auto;
+}
+
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+.gallery li {
+  flex: 0 1 calc(25% - 10px);
+
+}
+
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+.baner {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.baner-li {
+  text-align: center;
+  padding: 4px 0px;
+
+}
+
+.baner-title {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+}
+
+.baner-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader.visible {
+  display: block;
+}
