@@ -1,5 +1,5 @@
-import { fetchImages } from './src/js/pixabay-api';
-import { renderImages, clearGallery } from './src/js/render-functions';
+import { fetchImages } from './js/pixabay-api';
+import { renderImages, clearGallery } from './js/render-functions';
 
 const form = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
@@ -15,7 +15,7 @@ loadMoreBtn.style.display = 'none';
 
 async function handleSearch(event) {
   event.preventDefault();
-  query = event.currentTarget.elements.searchQuery.value.trim();
+  query = event.currentTarget.elements['search-text'].value.trim();
 
   if (!query) return;
 
