@@ -13,7 +13,7 @@ export function clearGallery() {
 }
 
 export function renderImages(images, append = false) {
-  if (!append) clearGallery();
+  // if (!append) clearGallery();
 
   const markup = images
     .map(
@@ -60,5 +60,4 @@ export function renderImages(images, append = false) {
   } else {
     gallery.innerHTML = markup;
   }
-  lightbox.refresh();
 }
