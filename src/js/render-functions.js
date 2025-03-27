@@ -8,10 +8,6 @@ let lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
 });
 
-export function clearGallery() {
-  gallery.innerHTML = '';
-}
-
 export function renderImages(images, append = false) {
   // if (!append) clearGallery();
 
@@ -61,4 +57,7 @@ export function renderImages(images, append = false) {
     gallery.innerHTML = markup;
   }
   lightbox.refresh();
+}
+export function clearGallery() {
+  gallery.innerHTML = '';
 }
