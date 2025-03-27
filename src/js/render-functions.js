@@ -60,4 +60,5 @@ export function renderImages(images, append = false) {
   } else {
     gallery.innerHTML = markup;
   }
+  lightbox.refresh();
 }
