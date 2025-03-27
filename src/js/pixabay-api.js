@@ -11,14 +11,12 @@ export async function fetchImages(query, page = 1) {
         image_type: `photo`,
         orientation: `horizontal`,
         safesearch: true,
-        per_page: 12,
+        per_page: 15,
         page,
       },
     });
 
-   return response.data;
-
-    
+    return response.data;
   } catch (error) {
     console.error(`Error fetching images:`, error);
     throw error;

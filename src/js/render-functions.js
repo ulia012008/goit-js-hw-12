@@ -55,6 +55,10 @@ export function renderImages(images, append = false) {
     )
     .join('');
 
-  gallery.innerHTML = markup;
+  if (append) {
+    gallery.insertAdjacentHTML('beforeend', markup);
+  } else {
+    gallery.innerHTML = markup;
+  }
   lightbox.refresh();
 }

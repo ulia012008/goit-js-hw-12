@@ -69,7 +69,8 @@ async function loadMoreImages() {
   try {
     const data = await fetchImages(query, page);
 
-    if (data.hits.length === 0 || page * perPage >= totalHits) {
+    renderImages(data.hits, true);
+    if (page * perPage >= totalHits) {
       loadMoreBtn.style.display = 'none';
       iziToast.info({
         title: 'Info',
@@ -79,7 +80,6 @@ async function loadMoreImages() {
       loadMoreBtn.style.display = 'block';
     }
 
-    renderImages(data.hits, true);
     smoothScroll();
   } catch (error) {
     iziToast.error({
